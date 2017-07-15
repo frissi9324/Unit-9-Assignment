@@ -1,0 +1,39 @@
+<!--
+  CS80 Chapter 9
+  Priscilla Jacobs
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CS80 Test 3d</title>
+    <script type="text/javascript">
+      // create variables and run function on window load
+      var wordItems;
+      window.onload = getItems();
+
+      // retrieve tag items with tag strong
+      function getItems() {
+      	wordItems = document.getElementsByTagName('strong');
+      }
+      
+      //change style to color red
+      function changeStyle(){
+      	for(var i = 0; i < wordItems.length; i++) {
+      		wordItems[i].style.color = "red";
+      	}
+      }
+
+      // change back to black 
+      function changeBack(){
+      	 for(var i = 0; i < wordItems.length; i++){
+      	 	wordItems[i].style.color = "black";
+      	 }
+      }
+
+    </script>
+</head>
+<body>
+   <p onMouseOver="changeStyle()" onMouseOut="changeBack()"><strong>We</strong> have just started <strong>this</strong> section for the users (<strong>beginner</strong> to intermediate) who want to work with <strong>various</strong> JavaScript <strong>problems</strong> and write scripts online to <strong>test</strong> their JavaScript <strong>skill</strong>.</p>
+</body>
+</html>
